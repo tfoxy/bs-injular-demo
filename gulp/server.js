@@ -49,6 +49,8 @@ browserSync.use(browserSyncSpa({
 
 browserSync.use(bsInjular, {
   controllers: '/app/**/*.controller.js',
+  directives: '/app/**/*.directive.js',
+  angularFile: '/bower_components/angular/angular.js',
   moduleFile: '/app/index.module.js',
   moduleName: 'bsInjularDemo'
 });
