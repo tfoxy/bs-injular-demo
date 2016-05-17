@@ -48,11 +48,13 @@ browserSync.use(browserSyncSpa({
 }));
 
 browserSync.use(bsInjular, {
+  templates: '/app/**/*.html',
   controllers: '/app/**/*.controller.js',
   directives: '/app/**/*.directive.js',
+  filters: '/app/**/*.filter.js',
   angularFile: '/bower_components/angular/angular.js',
   moduleFile: '/app/index.module.js',
-  moduleName: 'bsInjularDemo'
+  ngApp: 'bsInjularDemo'
 });
 
 gulp.task('serve', ['watch'], function () {
